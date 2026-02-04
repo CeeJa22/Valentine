@@ -16,19 +16,29 @@ img {
   display: none;
 }
 
+.greeting_container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .message {
   font-family: "Borel", cursive;
   font-size: 2rem;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 10vh;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-.axolotl_pic {
+.greeting_images {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 20vw;
+  height: 40vh;
   align-items: center;
   justify-content: center;
 }

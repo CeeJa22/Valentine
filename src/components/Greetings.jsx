@@ -5,13 +5,17 @@ import teamo from "../assets/teamo.png";
 
 const greetings = [
   {
-    a: "Hola, Mi Amorcito!!!",
+    message: "Hola, Mi Amorcito!!!",
     gif: axolotl,
     id: 1,
   },
-  { a: "you know that I love you,", gif: teamo, id: 2 },
-  { a: "and I miss you everyday,", gif: "", id: 3 },
-  { a: "but I have a question to ask......", gif: "", id: 4 },
+  { message: "you know that I love you,", gif: teamo, id: 2 },
+  {
+    message: "and I miss you everyday,",
+    gif: "https://media1.tenor.com/m/l-TVGqxlKCgAAAAC/cute-cat.gif",
+    id: 3,
+  },
+  { message: "but I have a question to ask......", gif: "", id: 4 },
 ];
 
 function Greetings() {
@@ -22,24 +26,27 @@ function Greetings() {
       setCurrGreeting(() => {
         if (currGreeting + 1 === greetings.length) {
           clearInterval(timer);
+          return null;
         } else {
           return currGreeting + 1;
         }
-      });
+      }, []);
     }, 5000);
 
     return () => {
       clearInterval(timer);
     };
-  }, [currGreeting]);
+  });
 
   return (
-    <div className="message">
-      <div>
-        {{}}
-        <img src={greetings[currGreeting].gif}></img>
+    <div>
+      <div className="greeting_container">
+        <p className="message">{greetings[currGreeting].message}</p>
+        <img
+          src={greetings[currGreeting].gif}
+          className="greeting_images"
+        ></img>
       </div>
-      <div className="message">{greetings[currGreeting].a}</div>
     </div>
   );
 }
