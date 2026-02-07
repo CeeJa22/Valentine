@@ -2,6 +2,13 @@
   padding: 0;
   margin: 0;
 }
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #bc96ca;
@@ -41,4 +48,69 @@ img {
   height: 40vh;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 30vh;
+  width: 30vw;
+  outline: 0.2rem solid palevioletred;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: rgb(234, 151, 243);
+}
+
+.question {
+  display: flex;
+  gap: 1rem;
+}
+
+.heart_img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.valentine {
+  font-size: 2rem;
+  position: relative;
+}
+
+.question_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 10vw;
+}
+
+.play_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1vh;
+  width: 1vw;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
